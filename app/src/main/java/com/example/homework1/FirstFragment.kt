@@ -1,44 +1,52 @@
 package com.example.homework1
 
-import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.homework1.databinding.FragmentFirstBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 class FirstFragment : Fragment() {
+    val a = "Test"
+    var result = testA(a)
 
-    private var _binding: FragmentFirstBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
-
+}
+fun testA(a: String) {
+    Log.d ("Test", "test----> $a")
+}
+open class Rectangle(open var width: Int = 40,open var height: Int = 40 ) {
+    open fun buildRectangle() {
+        val rectangle1 = Rectangle()
+        rectangle1.printSize()
+        rectangle1.getSquare()
+        val rectangle2 = Rectangle(width=10)
+        rectangle2.printSize()
+        rectangle2.getSquare()
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+    open fun printSize(){
+        println("Width: $width cm " +
+                "Height: $height cm ")
+    }
+    open fun getSquare () {
+        return println("Square: " + (width + height) * 2)
+    }
+    class Triangle(var length: Int = 2): Rectangle() {
+        override fun buildRectangle() {
+            val triangle1 = Triangle()
+            triangle1.width = 50
+            triangle1.height = 60
+            triangle1.printSize()
+            triangle1.getSquare()
+            val triangle2 = Triangle(length = 5)
+            triangle2.printSize()
+            triangle2.getSquare()
         }
-    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        override fun printSize() {
+            println("Width: $width cm " +
+                    "Height: $height cm " +
+                    "Length: $length cm")
+        }
+
+        override fun getSquare() {
+            return println("Square: " + (width + height + length))
+        }
     }
 }
