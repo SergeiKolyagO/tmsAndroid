@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 
 class FirstFragment : Fragment() {
     val a = "Test"
-    var result = testA(a)
+    val result = testA(a)
 
 }
 fun testA(a: String) {
