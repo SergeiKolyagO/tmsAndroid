@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Задание2</string>
+    <string name="app_name">задание2</string>
     <string name="R2">Привет пользователь</string>
     <string name="R3">Вперед</string>
     <string name="R4">Разработчик</string>
