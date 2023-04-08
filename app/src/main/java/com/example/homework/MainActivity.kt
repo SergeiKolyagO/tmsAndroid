@@ -36,7 +36,7 @@ class GetCollection : AppCompatActivity(){
         Log.d("TEST_ANDROID","$numbersMap")
         val numbersMap1 = mutableMapOf("one" to 1, "two" to 2)
         Log.d("TEST_ANDROID","$numbersMap1")
-        numbersMap1.put("tree", 3)
+        numbersMap1["tree"] = 3
         Log.d("TEST_ANDROID","$numbersMap1")
     }
 
