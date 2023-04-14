@@ -1,0 +1,169 @@
+Index: app/src/main/java/com/example/task3/FirstFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/task3/FirstFragment.kt b/app/src/main/java/com/example/task3/FirstFragment.kt
+new file mode 100644
+--- /dev/null	(date 1681372292789)
++++ b/app/src/main/java/com/example/task3/FirstFragment.kt	(date 1681372292789)
+@@ -0,0 +1,34 @@
++package com.example.task3
++
++import android.os.Bundle
++import androidx.fragment.app.Fragment
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++import androidx.core.widget.addTextChangedListener
++import com.example.task3.databinding.FragmentFirstBinding
++
++class FirstFragment : Fragment() {
++
++    lateinit var binding: FragmentFirstBinding
++
++    override fun onCreateView(
++        inflater: LayoutInflater, container: ViewGroup?,
++        savedInstanceState: Bundle?
++    ): View {
++        binding = FragmentFirstBinding.inflate(layoutInflater,container,false)
++        return binding.root
++    }
++
++    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
++        super.onViewCreated(view, savedInstanceState)
++        binding.passwordEditText.addTextChangedListener {
++            binding.loginButton.isEnabled = binding.passwordEditText.text.length > 8
++        }
++
++        binding.loginButton.setOnClickListener{
++            MAIN.navController.navigate(R.id.action_first_fragment_to_secondFragment)
++        }
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/task3/Constant.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/task3/Constant.kt b/app/src/main/java/com/example/task3/Constant.kt
+new file mode 100644
+--- /dev/null	(date 1681322651877)
++++ b/app/src/main/java/com/example/task3/Constant.kt	(date 1681322651877)
+@@ -0,0 +1,3 @@
++package com.example.task3
++
++lateinit var MAIN: MainActivity
+\ No newline at end of file
+Index: app/src/main/java/com/example/task3/SecondFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/task3/SecondFragment.kt b/app/src/main/java/com/example/task3/SecondFragment.kt
+new file mode 100644
+--- /dev/null	(date 1681325051428)
++++ b/app/src/main/java/com/example/task3/SecondFragment.kt	(date 1681325051428)
+@@ -0,0 +1,30 @@
++package com.example.task3
++
++import android.os.Bundle
++import androidx.fragment.app.Fragment
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++import com.example.task3.databinding.FragmentSecondBinding
++
++
++class SecondFragment : Fragment() {
++
++    lateinit var binding: FragmentSecondBinding
++
++    override fun onCreateView(
++        inflater: LayoutInflater, container: ViewGroup?,
++        savedInstanceState: Bundle?
++    ): View {
++        binding = FragmentSecondBinding.inflate(layoutInflater,container,false)
++        return binding.root
++    }
++
++    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
++        super.onViewCreated(view, savedInstanceState)
++        binding.btnBack.setOnClickListener {
++            MAIN.navController.navigate(R.id.action_secondFragment_to_first_fragment)
++        }
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/task3/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/task3/MainActivity.kt b/app/src/main/java/com/example/task3/MainActivity.kt
+new file mode 100644
+--- /dev/null	(date 1681323770428)
++++ b/app/src/main/java/com/example/task3/MainActivity.kt	(date 1681323770428)
+@@ -0,0 +1,23 @@
++package com.example.task3
++
++import androidx.appcompat.app.AppCompatActivity
++import android.os.Bundle
++import androidx.navigation.NavController
++import androidx.navigation.Navigation
++import com.example.task3.databinding.ActivityMainBinding
++
++
++class MainActivity : AppCompatActivity() {
++
++    lateinit var binding: ActivityMainBinding
++    lateinit var navController: NavController
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        binding = ActivityMainBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        navController = Navigation.findNavController(this, R.id.first_fragment)
++
++        MAIN = this
++    }
++}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 23d321bfb4018468e51ec6f38c4ad16d08e61c6b)
++++ b/app/src/main/AndroidManifest.xml	(date 1681373847654)
+@@ -6,22 +6,17 @@
+         android:allowBackup="true"
+         android:dataExtractionRules="@xml/data_extraction_rules"
+         android:fullBackupContent="@xml/backup_rules"
+-        android:icon="@mipmap/ic_launcher_1"
++        android:icon="@mipmap/ic_launcher"
+         android:label="@string/app_name"
+         android:supportsRtl="true"
+-        android:theme="@style/Theme.HomeWorK"
++        android:theme="@style/Theme.Task3"
+         tools:targetApi="31">
+-
+-        <activity
+-            android:name=".Info"
+-            android:exported="false" />
+         <activity
+             android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
++                <action android:name="android.intent.action.MAIN"/>
++                <category android:name="android.intent.category.LAUNCHER"/>
+             </intent-filter>
+         </activity>
+     </application>
