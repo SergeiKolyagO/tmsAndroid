@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">task3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title">Hello</string>
+    <string name="login">Введите имя:</string>
+    <string name="pass">Введите пароль:</string>
+    <string name="log_b">LOGIN</string>
+    <string name="btn_back">Back</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank </string>
+</resources>
