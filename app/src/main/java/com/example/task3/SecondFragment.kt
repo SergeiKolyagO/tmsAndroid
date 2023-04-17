@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import com.example.task3.databinding.FragmentSecondBinding
 
 
 class SecondFragment : Fragment() {
 
-    lateinit var binding: FragmentSecondBinding
+    private lateinit var binding: FragmentSecondBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +27,21 @@ class SecondFragment : Fragment() {
         binding.btnBack.setOnClickListener {
             MAIN.navController.navigate(R.id.action_secondFragment_to_first_fragment)
         }
+        setupListWithArrayAdapter()
+        setupSpinnerWithAdapter()
+    }
+    private fun setupListWithArrayAdapter(){
+
+        val adapter = ArrayAdapter.createFromResource(requireContext(),R.array.Languages,android.R.layout.simple_spinner_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinner1.adapter = adapter
+    }
+    private fun setupSpinnerWithAdapter(){
+        val adapter = ArrayAdapter.createFromResource(requireContext(),R.array.Languages,android.R.layout.simple_spinner_item)
+        binding.listView1.adapter = adapter
     }
 
+
 }
+
+
