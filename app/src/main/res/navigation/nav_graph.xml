@@ -8,7 +8,7 @@
         android:id="@+id/first_fragment"
         android:name="com.example.task3.FirstFragment"
         android:label="FirsFragment"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_first_fragment_to_secondFragment"
             app:destination="@id/secondFragment" />

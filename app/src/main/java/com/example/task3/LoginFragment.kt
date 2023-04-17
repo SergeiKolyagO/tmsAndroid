@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
-import com.example.task3.databinding.FragmentFirstBinding
+import com.example.task3.databinding.FragmentLoginBinding
 
 class FirstFragment : Fragment() {
 
-    lateinit var binding: FragmentFirstBinding
+    lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFirstBinding.inflate(layoutInflater,container,false)
+        binding = FragmentLoginBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
 
