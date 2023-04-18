@@ -21,6 +21,14 @@
         <action
             android:id="@+id/action_secondFragment_to_first_fragment"
             app:destination="@id/first_fragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/recyclerFragment"
+        android:name="com.example.task3.RecyclerFragment"
+        android:label="fragment_recycler"
+        tools:layout="@layout/fragment_recycler" />
 
 </navigation>

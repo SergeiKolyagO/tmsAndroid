@@ -6,6 +6,7 @@
     <string name="pass">Введите пароль:</string>
     <string name="log_b">LOGIN</string>
     <string name="btn_back">Back</string>
+    <string name="btn_next">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank </string>
     <string-array name="Languages">
