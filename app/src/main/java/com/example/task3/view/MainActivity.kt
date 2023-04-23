@@ -1,9 +1,11 @@
-package com.example.task3
+package com.example.task3.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.task3.MAIN
+import com.example.task3.R
 import com.example.task3.databinding.ActivityMainBinding
 
 

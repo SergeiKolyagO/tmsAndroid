@@ -6,28 +6,16 @@
     android:id="@+id/nav_graph">
     <fragment
         android:id="@+id/first_fragment"
-        android:name="com.example.task3.FirstFragment"
+        android:name="com.example.task3.LoginFragment"
         android:label="FirsFragment"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_first_fragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.task3.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
-        <action
-            android:id="@+id/action_secondFragment_to_first_fragment"
-            app:destination="@id/first_fragment" />
-        <action
-            android:id="@+id/action_secondFragment_to_recyclerFragment"
+            android:id="@+id/action_first_fragment_to_recyclerFragment"
             app:destination="@id/recyclerFragment" />
     </fragment>
     <fragment
         android:id="@+id/recyclerFragment"
-        android:name="com.example.task3.RecyclerFragment"
+        android:name="com.example.task3.view.RecyclerFragment"
         android:label="fragment_recycler"
         tools:layout="@layout/fragment_recycler" />
 

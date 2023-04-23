@@ -9,12 +9,35 @@
     <string name="btn_next">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank </string>
-    <string-array name="Languages">
-        <item>Java</item>
-        <item>Kotlin</item>
-        <item>Swift</item>
-        <item>Python</item>
-        <item>Scala</item>
-        <item>Perl</item>
-    </string-array>
+    <string name="poc1">Бульбазавр</string>
+    <string name="poc2">Мяут</string>
+    <string name="poc3">Чармандер</string>
+    <string name="poc4">Гипно</string>
+    <string name="poc5">Коффинг</string>
+    <string name="poc6">Старми</string>
+    <string name="poc7">Парас</string>
+    <string name="poc8">Голем</string>
+    <string name="poc9">Поливирл</string>
+    <string name="poc10">Пикачу</string>
+    <string name="poc11">Слоупок</string>
+    <string name="poc12">Сквиртл</string>
+    <string name="poc13">Катерпи</string>
+    <string name="poc14">Пиджи</string>
+    <string name="poc15">Видл</string>
+
+    <string name="pok1">Bulbasaur</string>
+    <string name="pok2">Meowth</string>
+    <string name="pok3">Charmander</string>
+    <string name="pok4">Hypno</string>
+    <string name="pok5">Koffing</string>
+    <string name="pok6">Starmie</string>
+    <string name="pok7">Paras</string>
+    <string name="pok8">Golem</string>
+    <string name="pok9">Poliwhirl</string>
+    <string name="pok10">Pikachu</string>
+    <string name="pok11">Слоупок</string>
+    <string name="pok12">Сквиртл</string>
+    <string name="pok13">Caterpie</string>
+    <string name="pok14">Pidgey</string>
+    <string name="pok15">Weedle</string>
 </resources>

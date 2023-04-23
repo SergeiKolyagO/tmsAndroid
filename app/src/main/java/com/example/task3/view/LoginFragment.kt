@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import com.example.task3.databinding.FragmentLoginBinding
 
-class FirstFragment : Fragment() {
+class LoginFragment : Fragment() {
 
     lateinit var binding: FragmentLoginBinding
 
@@ -27,7 +27,7 @@ class FirstFragment : Fragment() {
         }
 
         binding.loginButton.setOnClickListener{
-            MAIN.navController.navigate(R.id.action_first_fragment_to_secondFragment)
+            MAIN.navController.navigate(R.id.action_first_fragment_to_recyclerFragment)
         }
     }
 
