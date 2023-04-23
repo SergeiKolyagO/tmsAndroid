@@ -2,15 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/first_fragment"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
     <fragment
-        android:id="@+id/first_fragment"
-        android:name="com.example.task3.LoginFragment"
-        android:label="FirsFragment"
-        tools:layout="@layout/fragment_login">
+        android:id="@+id/loginFragment"
+        android:name="com.example.task3.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_first_fragment_to_recyclerFragment"
+            android:id="@+id/action_loginFragment_to_recyclerFragment"
             app:destination="@id/recyclerFragment" />
     </fragment>
     <fragment
@@ -18,5 +19,4 @@
         android:name="com.example.task3.view.RecyclerFragment"
         android:label="fragment_recycler"
         tools:layout="@layout/fragment_recycler" />
-
 </navigation>

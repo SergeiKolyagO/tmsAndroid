@@ -1,4 +1,4 @@
-package com.example.task3
+package com.example.task3.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
+import com.example.task3.MAIN
+import com.example.task3.R
 import com.example.task3.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
-    lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +29,7 @@ class LoginFragment : Fragment() {
         }
 
         binding.loginButton.setOnClickListener{
-            MAIN.navController.navigate(R.id.action_first_fragment_to_recyclerFragment)
+            MAIN.navController.navigate(R.id.action_loginFragment_to_recyclerFragment)
         }
     }
 
