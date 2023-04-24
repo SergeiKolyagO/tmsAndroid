@@ -1,10 +1,11 @@
 package com.example.task3.data
 
 import com.example.task3.R
+import com.example.task3.R.*
 import com.example.task3.model.Pocemon
 
 class PocemonDataSource {
-    fun loadInfo(): List<Pocemon>{
+    fun loadInfo(): List<Pocemon> {
         return listOf(
             Pocemon(R.string.poc1,R.drawable.bulb,R.string.pok1),
             Pocemon(R.string.poc2,R.drawable.cat,R.string.pok2),
