@@ -1,5 +1,6 @@
 package com.example.task3.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,7 @@ class RecyclerAdapter (private val items: List<Pocemon>) :
         val titleTextView: TextView = itemView.findViewById(R.id.text_recycler1)
         val smallTextView: TextView = itemView.findViewById(R.id.text_recycler2)
         val newsImage: CircleImageView = itemView.findViewById(R.id.title_image)
+
         init {
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
