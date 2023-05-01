@@ -1,7 +1,10 @@
 package com.example.task3.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.task3.MAIN
@@ -18,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         navController = Navigation.findNavController(this, R.id.firs_fragment)
 
         MAIN = this
