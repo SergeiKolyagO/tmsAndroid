@@ -1,7 +1,7 @@
 package com.example.task3.data
 
-import com.example.task3.R
-import com.example.task3.R.*
+import com.example.task3.R.drawable
+import com.example.task3.R.string
 import com.example.task3.model.Pocemon
 
 class PocemonDataSource {

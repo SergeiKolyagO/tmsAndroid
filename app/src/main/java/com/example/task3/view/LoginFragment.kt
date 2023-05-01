@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
         }
 
         binding.loginButton.setOnClickListener{
-            MAIN.navController.navigate(R.id.action_loginFragment_to_recyclerFragment)
+            MAIN.navController.navigate(R.id.action_login_fragment_to_recyclerFragment)
         }
     }
 
