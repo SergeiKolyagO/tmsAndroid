@@ -1,4 +1,4 @@
-package com.example.task3.view
+package task5.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.task3.MAIN
+import task5.MAIN
 import com.example.task3.R
-import com.example.task3.adapter.RecyclerAdapter
-import com.example.task3.data.PocemonDataSource
+import task5.adapter.RecyclerAdapter
+import task5.data.PocemonDataSource
 import com.example.task3.databinding.FragmentRecyclerBinding
 
 

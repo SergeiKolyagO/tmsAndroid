@@ -1,13 +1,13 @@
-package com.example.task3.adapter
+package task5.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.task3.MAIN
+import task5.MAIN
 import com.example.task3.R
-import com.example.task3.model.Pocemon
+import task5.model.Pocemon
 import de.hdodenhof.circleimageview.CircleImageView
 
 class RecyclerAdapter (private val items: List<Pocemon>,

@@ -1,4 +1,4 @@
-package com.example.task3.model
+package task5.model
 
 data class Pocemon(
     val nameRu: Int,

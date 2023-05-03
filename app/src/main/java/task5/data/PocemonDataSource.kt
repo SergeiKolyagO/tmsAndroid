@@ -1,8 +1,8 @@
-package com.example.task3.data
+package task5.data
 
 import com.example.task3.R.drawable
 import com.example.task3.R.string
-import com.example.task3.model.Pocemon
+import task5.model.Pocemon
 
 class PocemonDataSource {
 

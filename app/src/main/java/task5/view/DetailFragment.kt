@@ -1,11 +1,11 @@
-package com.example.task3.view
+package task5.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.task3.MAIN
+import task5.MAIN
 import com.example.task3.R
 import com.example.task3.databinding.FragmentDetailBinding
 
