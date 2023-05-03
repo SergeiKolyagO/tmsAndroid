@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.task3.MAIN
+import com.example.task3.R
 import com.example.task3.databinding.FragmentDetailBinding
 
 
@@ -22,6 +24,9 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.buttonBack.setOnClickListener{
+            MAIN.navController.navigate(R.id.action_detailFragment_to_recyclerFragment)
+        }
 
 
     }

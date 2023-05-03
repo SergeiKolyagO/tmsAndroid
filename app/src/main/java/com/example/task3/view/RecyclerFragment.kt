@@ -22,7 +22,6 @@ class RecyclerFragment : Fragment() {
     ): View {
         binding = FragmentRecyclerBinding.inflate(layoutInflater,container,false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,7 +34,8 @@ class RecyclerFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = RecyclerAdapter(
                 items = PocemonDataSource().elements(),
-                onItemClickEvent = { MAIN.navController.navigate(R.id.action_recyclerFragment_to_detailFragment)})
+                onItemClickEvent = {
+                MAIN.navController.navigate(R.id.action_recyclerFragment_to_detailFragment)})
         }
     }
 }
