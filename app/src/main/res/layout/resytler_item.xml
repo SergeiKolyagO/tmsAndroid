@@ -6,7 +6,7 @@
     android:layout_margin="8dp">
 
     <TextView
-        android:id="@+id/text_recycler1"
+        android:id="@+id/name_ru"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_recycler2"
+        android:id="@+id/name_en"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,7 +30,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/title_image"
-        app:layout_constraintTop_toBottomOf="@+id/text_recycler1" />
+        app:layout_constraintTop_toBottomOf="@+id/name_ru" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/title_image"

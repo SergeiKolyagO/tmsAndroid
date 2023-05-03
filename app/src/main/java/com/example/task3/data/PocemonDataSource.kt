@@ -9,84 +9,83 @@ class PocemonDataSource {
 
     fun elements(): List<Pocemon> {
 
-        val pocemon = mutableListOf(
-            Pocemon (
+        return mutableListOf(
+            Pocemon(
                 nameRu = string.poc1,
                 imageResourceId = drawable.bulb,
                 nameEn = string.pok1
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc2,
                 imageResourceId = drawable.cat,
                 nameEn = string.pok2
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc3,
                 imageResourceId = drawable.charman,
                 nameEn = string.pok3
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc4,
                 imageResourceId = drawable.d,
                 nameEn = string.pok4
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc5,
                 imageResourceId = drawable.f,
                 nameEn = string.pok5
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc6,
                 imageResourceId = drawable.g,
                 nameEn = string.pok6,
 
-            ),
-            Pocemon (
+                ),
+            Pocemon(
                 nameRu = string.poc7,
                 imageResourceId = drawable.i,
                 nameEn = string.pok7
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc8,
                 imageResourceId = drawable.nooo,
                 nameEn = string.pok8
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc9,
                 imageResourceId = drawable.p,
                 nameEn = string.pok9
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc10,
                 imageResourceId = drawable.pica,
                 nameEn = string.pok10
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc11,
                 imageResourceId = drawable.s,
                 nameEn = string.pok11
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc12,
                 imageResourceId = drawable.sqvi,
                 nameEn = string.pok12
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc13,
                 imageResourceId = drawable.t,
                 nameEn = string.pok13
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc14,
                 imageResourceId = drawable.u,
                 nameEn = string.pok14
             ),
-            Pocemon (
+            Pocemon(
                 nameRu = string.poc15,
                 imageResourceId = drawable.y,
                 nameEn = string.pok15
             )
         )
-       return pocemon;
     }
 }

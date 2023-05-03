@@ -16,8 +16,8 @@ class RecyclerAdapter (private val items: List<Pocemon>,
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val titleTextView: TextView = itemView.findViewById(R.id.text_recycler1)
-        val smallTextView: TextView = itemView.findViewById(R.id.text_recycler2)
+        val titleTextView: TextView = itemView.findViewById(R.id.name_ru)
+        val smallTextView: TextView = itemView.findViewById(R.id.name_en)
         val newsImage: CircleImageView = itemView.findViewById(R.id.title_image)
 
     }
