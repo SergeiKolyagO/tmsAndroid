@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="task5.view.DetailFragment">
+    tools:context="task5.view.DetailFragment"
+    android:background="@color/grey">
 
     <TextView
         android:id="@+id/heading"

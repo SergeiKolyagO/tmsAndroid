@@ -10,17 +10,17 @@ import task5.MAIN
 import com.example.task3.R
 import task5.adapter.RecyclerAdapter
 import task5.data.PocemonDataSource
-import com.example.task3.databinding.FragmentRecyclerBinding
+import com.example.task3.databinding.FragmentNewsBinding
 
 
-class RecyclerFragment : Fragment() {
-    private lateinit var binding: FragmentRecyclerBinding
+class NewsFragment : Fragment() {
+    private lateinit var binding: FragmentNewsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRecyclerBinding.inflate(layoutInflater,container,false)
+        binding = FragmentNewsBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
 
