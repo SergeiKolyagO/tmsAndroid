@@ -1,16 +1,15 @@
-package task5.adapter
+package task5.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import task5.MAIN
 import com.example.task3.R
-import task5.model.Pocemon
 import de.hdodenhof.circleimageview.CircleImageView
+import task5.domain.models.ListPost
 
-class RecyclerAdapter (private val items: List<Pocemon>,
+class RecyclerAdapter (private val items: ListPost,
                        private val onItemClickEvent: (View) -> Unit) :
     RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
 
@@ -18,7 +17,7 @@ class RecyclerAdapter (private val items: List<Pocemon>,
 
         val titleTextView: TextView = itemView.findViewById(R.id.name_ru)
         val smallTextView: TextView = itemView.findViewById(R.id.name_en)
-        val newsImage: CircleImageView = itemView.findViewById(R.id.title_image)
+      //  val newsImage: CircleImageView = itemView.findViewById(R.id.title_image)
 
     }
 
@@ -32,12 +31,12 @@ class RecyclerAdapter (private val items: List<Pocemon>,
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val pokemon = items[position]
-        holder.titleTextView.text = MAIN.resources.getString(pokemon.nameRu)
-        holder.newsImage.setImageResource(pokemon.imageResourceId)
-        holder.smallTextView.text = MAIN.resources.getString(pokemon.nameEn)
-        holder.itemView.setOnClickListener(onItemClickEvent)
+     //   val pokemon = items.posts[position]
+        holder.titleTextView.text = items.posts!![position].title
+      //  holder.newsImage.setImageResource(pokemon.imageResourceId)
+        holder.smallTextView.text = items.posts[position].description
+       // holder.itemView.setOnClickListener(onItemClickEvent)
     }
-    override fun getItemCount() = items.size
+    override fun getItemCount() = items.posts!!.size
 
 }

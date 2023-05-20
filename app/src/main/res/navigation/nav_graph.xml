@@ -6,7 +6,7 @@
     app:startDestination="@id/login_fragment">
     <fragment
         android:id="@+id/login_fragment"
-        android:name="task5.view.LoginFragment"
+        android:name="task5.presentation.view.LoginFragment"
         android:label="FirsFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/recyclerFragment"
-        android:name="task5.view.RecyclerFragment"
+        android:name="task5.presentation.view.RecyclerFragment"
         android:label="fragment_recycler"
         tools:layout="@layout/fragment_recycler">
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="task5.view.DetailFragment"
+        android:name="task5.presentation.view.DetailFragment"
         android:label="DetailFragment">
         <action
             android:id="@+id/action_detailFragment_to_recyclerFragment"

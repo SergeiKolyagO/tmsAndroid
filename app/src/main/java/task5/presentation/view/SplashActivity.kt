@@ -1,4 +1,4 @@
-package task5.view
+package task5.presentation.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

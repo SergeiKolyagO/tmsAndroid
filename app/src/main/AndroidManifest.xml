@@ -13,7 +13,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name="task5.view.SplashActivity"
+            android:name="task5.presentation.view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="task5.view.MainActivity"
+            android:name="task5.presentation.view.MainActivity"
             android:exported="true" />
     </application>
 
