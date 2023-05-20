@@ -5,8 +5,8 @@ import task5.domain.models.Post
 
 data class PostDto(
     val id: Int,
-    val title: String?,
-    val description: String?
+    val title: String? = null,
+    val description: String? = null
 )
 fun PostDto.toPost() : Post {
     return Post(

@@ -4,4 +4,5 @@ import task5.data.remote.dto.PostDto
 
 interface PostsRemote {
     fun getPosts() : List<PostDto>
+    fun getPostInfo(): PostDto
 }

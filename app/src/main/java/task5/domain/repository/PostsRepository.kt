@@ -1,7 +1,9 @@
 package task5.domain.repository
 
-import task5.domain.models.Post
+import task5.data.remote.dto.PostDto
 
 interface PostsRepository {
-    fun getPosts() : List<Post>
+    fun getPosts(): List<PostDto>
+    fun getPostInfo(): PostDto
+
 }

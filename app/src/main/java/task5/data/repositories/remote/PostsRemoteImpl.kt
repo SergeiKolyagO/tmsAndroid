@@ -81,4 +81,11 @@ class PostsRemoteImpl : PostsRemote {
                 description = "Weedle"
             )
         )
+
+    override fun getPostInfo(): PostDto =
+        PostDto(
+            id = 1,
+            title = "Бульбазавр",
+            description = "Bulbasaur"
+        )
 }

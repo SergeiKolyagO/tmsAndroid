@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import task5.MAIN
@@ -21,7 +22,7 @@ class RecyclerFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(requireActivity()).get(PostsViewModel::class.java)
+        viewModel = ViewModelProvider (owner = this) [PostsViewModel::class.java]
     }
 
     override fun onCreateView(

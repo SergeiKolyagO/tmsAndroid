@@ -32,11 +32,15 @@ class RecyclerAdapter (private val items: ListPost,
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
      //   val pokemon = items.posts[position]
-        holder.titleTextView.text = items.posts!![position].title
+        holder.apply {
+            titleTextView.text = items.posts[position].title
+            smallTextView.text = items.posts[position].description
+        }
+      //  holder.titleTextView.text = items.posts!![position].title
       //  holder.newsImage.setImageResource(pokemon.imageResourceId)
-        holder.smallTextView.text = items.posts[position].description
+      //  holder.smallTextView.text = items.posts[position].description
        // holder.itemView.setOnClickListener(onItemClickEvent)
     }
-    override fun getItemCount() = items.posts!!.size
+    override fun getItemCount() = items.posts.size
 
 }
