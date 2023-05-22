@@ -7,8 +7,9 @@ import androidx.navigation.Navigation
 import task5.MAIN
 import com.example.task3.R
 import com.example.task3.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

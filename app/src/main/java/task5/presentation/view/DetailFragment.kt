@@ -5,24 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import task5.MAIN
 import com.example.task3.R
 import com.example.task3.databinding.FragmentDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 import task5.domain.models.Post
 import task5.presentation.view_models.PostViewModelInfo
 
-
+@AndroidEntryPoint
 class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
-    private var viewModel : PostViewModelInfo? = null
+    private val viewModel : PostViewModelInfo by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewModel = ViewModelProvider(owner = this)[PostViewModelInfo::class.java]
         binding = FragmentDetailBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
@@ -39,7 +39,7 @@ class DetailFragment : Fragment() {
 
     }
     private fun initRecycler() {
-        val postInfo = viewModel?.postInfo?.value ?: Post()
+        val postInfo = viewModel.postInfo.value ?: Post()
 
         binding.apply {
             heading.text = postInfo.title

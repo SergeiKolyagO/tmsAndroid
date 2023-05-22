@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,18 +13,16 @@ import task5.MAIN
 import com.example.task3.R
 import task5.presentation.adapter.RecyclerAdapter
 import com.example.task3.databinding.FragmentRecyclerBinding
+import dagger.hilt.android.AndroidEntryPoint
 import task5.domain.models.ListPost
 import task5.presentation.view_models.PostsViewModel
 
-
+@AndroidEntryPoint
 class RecyclerFragment : Fragment() {
     private lateinit var binding: FragmentRecyclerBinding
-    private var viewModel : PostsViewModel? = null
+    private val viewModel : PostsViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider (owner = this) [PostsViewModel::class.java]
-    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +38,7 @@ class RecyclerFragment : Fragment() {
     }
     private fun initRecycler(){
 
-        val posts = viewModel?.postList?.value?: ListPost()
+        val posts = viewModel.postList.value?: ListPost()
 
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
