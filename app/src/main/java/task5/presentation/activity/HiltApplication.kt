@@ -1,4 +1,4 @@
-package task5.presentation.view
+package task5.presentation.activity
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

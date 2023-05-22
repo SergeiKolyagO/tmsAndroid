@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="task5.presentation.view.DetailFragment">
+    tools:context="task5.presentation.fragments.DetailFragment">
 
     <TextView
         android:id="@+id/heading"
@@ -20,6 +20,7 @@
 
     <ImageView
         android:id="@+id/info_image"
+        android:src="@drawable/pica"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:contentDescription="@string/app_name"

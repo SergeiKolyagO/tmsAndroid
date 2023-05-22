@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="task5.presentation.view.MainActivity">
+    tools:context="task5.presentation.activity.MainActivity">
 
     <fragment
         android:id="@+id/firs_fragment"

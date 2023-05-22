@@ -1,4 +1,4 @@
-package task5.presentation.view
+package task5.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
