@@ -16,7 +16,7 @@ import task5.domain.models.ListPost
 import task5.presentation.view_models.PostsViewModel
 
 @AndroidEntryPoint
-class RecyclerFragment : Fragment() {
+class PokemonsFragment : Fragment() {
     private lateinit var binding: FragmentRecyclerBinding
     private val viewModel : PostsViewModel by viewModels()
 
