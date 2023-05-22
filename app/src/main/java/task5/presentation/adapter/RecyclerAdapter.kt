@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.task3.R
-import de.hdodenhof.circleimageview.CircleImageView
 import task5.domain.models.ListPost
 
 class RecyclerAdapter (private val items: ListPost,
@@ -17,7 +16,6 @@ class RecyclerAdapter (private val items: ListPost,
 
         val titleTextView: TextView = itemView.findViewById(R.id.name_ru)
         val smallTextView: TextView = itemView.findViewById(R.id.name_en)
-      //  val newsImage: CircleImageView = itemView.findViewById(R.id.title_image)
 
     }
 
@@ -31,15 +29,10 @@ class RecyclerAdapter (private val items: ListPost,
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-     //   val pokemon = items.posts[position]
         holder.apply {
             titleTextView.text = items.posts[position].title
             smallTextView.text = items.posts[position].description
         }
-      //  holder.titleTextView.text = items.posts!![position].title
-      //  holder.newsImage.setImageResource(pokemon.imageResourceId)
-      //  holder.smallTextView.text = items.posts[position].description
-       // holder.itemView.setOnClickListener(onItemClickEvent)
     }
     override fun getItemCount() = items.posts.size
 
