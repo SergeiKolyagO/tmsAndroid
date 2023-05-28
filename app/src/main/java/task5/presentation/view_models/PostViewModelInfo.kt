@@ -20,6 +20,6 @@ class PostViewModelInfo @Inject constructor(
     }
 
     private fun getPostInfo(){
-        _postInfo.value = getPostInfoUseCase.getPostInfo()
+      //  _postInfo.value = getPostInfoUseCase.getPostInfo()
     }
 }

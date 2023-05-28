@@ -1,8 +1,8 @@
 package task5.data.repositories.remote
 
-import task5.data.remote.dto.PostDto
+
+import task5.data.remote.dto.ResponseDto
 
 interface PostsRemote {
-    fun getPosts() : List<PostDto>
-    fun getPostInfo(): PostDto
+    suspend fun getPosts() : ResponseDto
 }

@@ -10,7 +10,6 @@ import javax.inject.Singleton
 class PostsRepositoryImpl @Inject constructor(
     private val postsRemote: PostsRemote
 ) : PostsRepository {
-    override fun getPosts(): List<PostDto> = postsRemote.getPosts()
-    override fun getPostInfo(): PostDto = postsRemote.getPostInfo()
+    override suspend fun getPosts(): List<PostDto> = postsRemote.getPosts().posts.orEmpty()
 
 }

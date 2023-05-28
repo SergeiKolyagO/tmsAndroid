@@ -1,6 +1,5 @@
 package task5.domain.use_cases
 
-import task5.data.remote.dto.toPost
 import task5.domain.repository.PostsRepository
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -10,5 +9,5 @@ import javax.inject.Singleton
 class GetPostInfoUseCase @Inject constructor(
     private val postsRepository: PostsRepository
 ) {
-    fun getPostInfo() = postsRepository.getPostInfo().toPost()
+   // fun getPostInfo() = postsRepository.getPostInfo().toPost()
 }

@@ -13,6 +13,7 @@ import task5.presentation.adapter.RecyclerAdapter
 import com.example.task3.databinding.FragmentRecyclerBinding
 import dagger.hilt.android.AndroidEntryPoint
 import task5.domain.models.ListPost
+import task5.domain.models.Post
 import task5.presentation.view_models.PostsViewModel
 
 @AndroidEntryPoint
@@ -32,18 +33,33 @@ class PokemonsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initRecycler()
+        observePosts()
     }
-    private fun initRecycler(){
+    private fun observePosts(){
 
-        val posts = viewModel.postList.value?: ListPost()
+        viewModel.postList.observe(viewLifecycleOwner) {
+            posts-> initRecycler(posts)
+        }
 
+//        val posts = viewModel.postList.value?: ListPost()
+//
+//        binding.recyclerView.apply {
+//            layoutManager = LinearLayoutManager(requireContext())
+//            adapter = RecyclerAdapter(
+//                items = posts,
+//                onItemClickEvent = {
+//                MAIN.navController.navigate(R.id.action_recyclerFragment_to_detailFragment)})
+//        }
+    }
+    private fun initRecycler(posts: List<Post>) {
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = RecyclerAdapter(
                 items = posts,
                 onItemClickEvent = {
-                MAIN.navController.navigate(R.id.action_recyclerFragment_to_detailFragment)})
+                    MAIN.navController.navigate(R.id.action_recyclerFragment_to_detailFragment)
+                }
+            )
         }
     }
 }

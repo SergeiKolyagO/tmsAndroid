@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import task5.data.remote.api.PostsApi
 import task5.data.repositories.remote.PostsRemote
 import task5.data.repositories.remote.PostsRemoteImpl
 
@@ -12,5 +13,5 @@ import task5.data.repositories.remote.PostsRemoteImpl
 @InstallIn(SingletonComponent::class)
 class RemoteRepositoryModule {
     @Provides
-    fun providePostsRemote(): PostsRemote = PostsRemoteImpl()
+    fun providePostsRemote(postsApi: PostsApi): PostsRemote = PostsRemoteImpl(postsApi = postsApi)
 }
