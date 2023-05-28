@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import task5.domain.models.ListPost
 import task5.domain.models.Post
 import task5.domain.use_cases.PostsUseCase
 import javax.inject.Inject

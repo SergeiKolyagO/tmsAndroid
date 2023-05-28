@@ -12,7 +12,6 @@ import com.example.task3.R
 import task5.presentation.adapter.RecyclerAdapter
 import com.example.task3.databinding.FragmentRecyclerBinding
 import dagger.hilt.android.AndroidEntryPoint
-import task5.domain.models.ListPost
 import task5.domain.models.Post
 import task5.presentation.view_models.PostsViewModel
 
@@ -41,15 +40,6 @@ class PokemonsFragment : Fragment() {
             posts-> initRecycler(posts)
         }
 
-//        val posts = viewModel.postList.value?: ListPost()
-//
-//        binding.recyclerView.apply {
-//            layoutManager = LinearLayoutManager(requireContext())
-//            adapter = RecyclerAdapter(
-//                items = posts,
-//                onItemClickEvent = {
-//                MAIN.navController.navigate(R.id.action_recyclerFragment_to_detailFragment)})
-//        }
     }
     private fun initRecycler(posts: List<Post>) {
         binding.recyclerView.apply {
