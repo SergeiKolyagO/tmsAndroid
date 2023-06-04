@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/login_fragment">
+    app:startDestination="@id/testFragment">
     <fragment
         android:id="@+id/login_fragment"
         android:name="task5.presentation.fragments.LoginFragment"
@@ -30,5 +30,10 @@
             android:id="@+id/action_detailFragment_to_recyclerFragment"
             app:destination="@id/recyclerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="task5.presentation.fragments.TestFragment"
+        android:label="TestFragment" />
+
 
 </navigation>
